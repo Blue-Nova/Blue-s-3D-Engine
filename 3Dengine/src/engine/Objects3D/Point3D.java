@@ -43,8 +43,8 @@ public class Point3D extends Object3D {
 		setCoordsToCenter();
 
 		countRotation();
-		//vertex3D = matrixTools.matrixMult(TransMatrixLib.rotationZ(rotationAngle), vertex3D);
-		//vertex3D = matrixTools.matrixMult(TransMatrixLib.rotationX(rotationAngle), vertex3D);
+		//vertex3D = matrixTools.matrixMult(TransMatrixLib.rotationZ(rotationAngle), vertex3D);   //THESE VERTEX LINES DECIDE IN WHICH WAYS WILL THE SHAPES BE 
+		//vertex3D = matrixTools.matrixMult(TransMatrixLib.rotationX(rotationAngle), vertex3D);   // ROTATED AROUND THE ORIGIN POINT
 		//vertex3D = matrixTools.matrixMult(TransMatrixLib.rotationY(rotationAngle), vertex3D);
 		rotatedCoords[0][0] = vertex3D[0][0]+this.center[0][0];
 		rotatedCoords[1][0] = vertex3D[1][0]+this.center[1][0];
@@ -75,8 +75,8 @@ public class Point3D extends Object3D {
 
 	public void countRotation() {
 
-		//this.center = matrixTools.matrixMult(TransMatrixLib.rotationX(rotationAngle),this.center);
-		this.center = matrixTools.matrixMult(TransMatrixLib.rotationZ(rotationAngle),this.center);
+		//this.center = matrixTools.matrixMult(TransMatrixLib.rotationX(rotationAngle),this.center); //THESE CENTER LINES DECIDE IN WHICH WAYS WILL THE SHAPES BE
+		this.center = matrixTools.matrixMult(TransMatrixLib.rotationZ(rotationAngle),this.center); // ROTATED AROUND THEMSELVES
 		//this.center = matrixTools.matrixMult(TransMatrixLib.rotationY(rotationAngle),this.center);
 
 	}
