@@ -5,10 +5,10 @@ import java.awt.Canvas; //                                                      
 import java.awt.Color;  //                                                                            | -in openWorld() will be your area of creating all the shapes
 import java.awt.Graphics;//                                                                           | -static shape class has alot of funtions to create alot of shapes
 import java.awt.image.BufferStrategy;//                                                               | -each shape has their own arguments. try em out
-import java.util.Random;//                                                                            | - you can disable specific rotations in the XX class by commenting
+import java.util.Random;//                                                                            | - you can disable specific rotations in the Point3D class by commenting
 //                                                                                                    |   out certain lines where it rotates the shapes in functions:
-import javax.swing.JFrame;//                                                                          |    * XX
-//                                                                                                    |    * XX
+import javax.swing.JFrame;//                                                                          |    * CountRotation()
+//                                                                                                    |    * Tick()
 import engine.ObjectFX.ShapeRandomSpawns;//                                                           | - have fun :=)
 import engine.Objects3D.ObjectHandler;//                                                              |
 import engine.Objects3D.Shapes3D;//                                                                   |
