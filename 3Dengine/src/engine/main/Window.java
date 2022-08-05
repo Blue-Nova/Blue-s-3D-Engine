@@ -1,29 +1,29 @@
 package engine.main;
 
-import java.awt.Canvas;
-
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.image.BufferStrategy;
-import java.util.Random;
-
-import javax.swing.JFrame;
-
-import engine.ObjectFX.ShapeRandomSpawns;
-import engine.Objects3D.ObjectHandler;
-import engine.Objects3D.Shapes3D;
-
-public class Window extends Canvas implements Runnable {
-
-	private static final float TIME_SPEED = 1f;
-	private static final long serialVersionUID = -1660049387310505671L;
-	public static final int WIDTH = 1900;
-	public static final int HEIGHT = WIDTH / 10 * 6; // 1140
-	private Thread gameThread;
-	private boolean running = false;
-	public JFrame jFrame;
-	public String title = "3D engine";
-	public ObjectHandler handler = new ObjectHandler();
+import java.awt.Canvas; //                                                                            |
+//                                                                                                    | HOW TO MAKE SHAPES APPEAR:
+import java.awt.Color;  //                                                                            | -in openWorld() will be your area of creating all the shapes
+import java.awt.Graphics;//                                                                           | -static shape class has alot of funtions to create alot of shapes
+import java.awt.image.BufferStrategy;//                                                               | -each shape has their own arguments. try em out
+import java.util.Random;//                                                                            | - you can disable specific rotations in the XX class by commenting
+//                                                                                                    |   out certain lines where it rotates the shapes in functions:
+import javax.swing.JFrame;//                                                                          |    * XX
+//                                                                                                    |    * XX
+import engine.ObjectFX.ShapeRandomSpawns;//                                                           | - have fun :=)
+import engine.Objects3D.ObjectHandler;//                                                              |
+import engine.Objects3D.Shapes3D;//                                                                   |
+//                                                                                                    |
+public class Window extends Canvas implements Runnable {//                                            |
+//                                                                                                    |
+	private static final float TIME_SPEED = 1f;//                                                 |
+	private static final long serialVersionUID = -1660049387310505671L;//                         |
+	public static final int WIDTH = 1900;//                                                       |
+	public static final int HEIGHT = WIDTH / 10 * 6; // 1140//                                    |
+	private Thread gameThread;//                                                                  |
+	private boolean running = false;//                                                            |
+	public JFrame jFrame;//                                                                       |
+	public String title = "3D engine";//                                                          |
+	public ObjectHandler handler = new ObjectHandler();//                                         |
 	public static Shapes3D shape = new Shapes3D();
 	public ShapeRandomSpawns shapesRandom = new ShapeRandomSpawns();
 	boolean ticking = false;
